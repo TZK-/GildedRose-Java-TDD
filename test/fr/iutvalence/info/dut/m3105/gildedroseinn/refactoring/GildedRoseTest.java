@@ -31,4 +31,10 @@ public class GildedRoseTest {
 		assertThatItemQualityAndSellinAreUpdatedAsExpected(item, 1, 2);
 	}
 
+	@Test
+	public void assertThatItemQualityIsValid(){
+		Item item = new Item("Item", DEFAULT_SELLIN, 0);
+		assertThatItemQualityAndSellinAreUpdatedAsExpected(item, 1, 0);
+	}
+	
 }

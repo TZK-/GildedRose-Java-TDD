@@ -42,4 +42,17 @@ public class Item
 	{
 		this.quality = quality;
 	}
+	
+	public void decrementQuality() {
+		if(this.getQuality() > 0)
+			this.setQuality(getQuality() - 1);
+	}
+
+	public void decrementSellIn() {
+		this.setSellIn(getSellIn() - 1);
+	}
+	
+	public boolean isSellinExpired() {
+		return this.getSellIn() < 0;
+	}
 }
