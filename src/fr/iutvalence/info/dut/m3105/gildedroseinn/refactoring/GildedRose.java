@@ -27,6 +27,8 @@ public class GildedRose
 	{
 		decrementSellIn(item);
 		decrementQuality(item);
+		if(item.getSellIn() < 0)
+			decrementQuality(item);
 	}
 
 	private static void decrementQuality(Item item) {
